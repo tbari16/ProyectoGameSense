@@ -9,7 +9,7 @@ const Header = () => {
                 <div>
                     {/* Estos tienen que ser Link. Cambiarlo luego. */}
                     <h1><Link to = '/' className='title'>GameSense</Link></h1>
-                    <a href="" className='hover'>Iniciar Sesion</a>
+{/*                     <a href="" className='hover'>Iniciar Sesion</a> */}
                 </div>
             </header>
         </>
