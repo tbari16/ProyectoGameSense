@@ -1,0 +1,16 @@
+ul {
+    padding-left: 0em;
+}
+
+ul li {
+    list-style: none;
+}
+
+.soporte-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 10em;
+    align-items: center;
+    
+}

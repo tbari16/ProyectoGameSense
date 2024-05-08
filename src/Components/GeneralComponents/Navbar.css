@@ -1,0 +1,10 @@
+nav {
+    height: 7em;
+    background-color: whitesmoke;
+}
+
+
+.nav-link:hover {
+    background-color: rgb(92, 162, 231);
+    border-radius: 5px;
+}

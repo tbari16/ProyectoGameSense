@@ -1,0 +1,46 @@
+.secciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 65%;
+}
+
+.titulo h2 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.cards-countainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 15em;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+
+b {
+    background-color: currentColor;
+    display: block;
+    flex: 1;
+    height: 2px;
+    opacity: .15;
+}

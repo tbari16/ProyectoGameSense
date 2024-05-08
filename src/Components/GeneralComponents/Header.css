@@ -1,0 +1,40 @@
+header {
+    background-color: whitesmoke;
+    font-weight: 500;
+    font-size: 1.15em;
+    color: #313ae3;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+header h1 {
+    font-size: 5em;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.title {
+    text-decoration: inherit;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-style: normal;
+}
+
+.hover {
+    text-decoration: inherit;
+    color: rgb(90, 90, 90);
+}
+
+.hover:hover {
+    color: black;
+}

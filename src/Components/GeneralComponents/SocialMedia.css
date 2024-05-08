@@ -1,0 +1,16 @@
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons img {
+    height: 3em;
+    width: 3em;
+}
+
+.socialMedia-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 10em;
+}
