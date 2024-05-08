@@ -1,6 +1,6 @@
 import { useState } from 'react'; // Para manejar el estado local
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, clearCart, incrementQuantity, decrementQuantity } from '../Components/Redux/cartSlice';
+import { removerDelCart, clearCart, incrementarCantidad, decrementarCantidad } from '../Components/Redux/cartSlice';
 import './View.css'
 import Swal from 'sweetalert2';
 
@@ -19,29 +19,29 @@ const Toast = Swal.mixin({
 const CartView = () => {
     const cart = useSelector((state) => state.cart.items); // Obtener el carrito desde Redux
     const dispatch = useDispatch(); // Obtener el dispatch para acciones
-    const [discountCode, setDiscountCode] = useState(''); // Almacenar el código ingresado
-    const [discountApplied, setDiscountApplied] = useState(false); // Indicar si el descuento está aplicado
+    const [codigoDescuento, setCodigoDescuento] = useState(''); // Almacenar el código ingresado
+    const [descuentoAplicado, setDescuentoAplicado] = useState(false); // Indicar si el descuento está aplicado
 
     const totalPrice = cart.reduce((total, item) => total + (item.precio * item.cantidad), 0);
 
-    const discountedPrice = discountApplied
+    const precioDescuento = descuentoAplicado
         ? totalPrice * 0.7 // Aplicar el descuento del 30%
         : totalPrice; // Si no hay descuento, mantener el total original
 
-    const handleRemoveFromCart = (producto) => {
-        dispatch(removeFromCart(producto.id)); // Eliminar por ID
+    const handleRemoverDelCart = (producto) => {
+        dispatch(removerDelCart(producto.id)); // Eliminar por ID
     };
 
     const handleClearCart = () => {
         dispatch(clearCart()); // Vaciar el carrito
     };
 
-    const handleIncrement = (itemId) => {
-        dispatch(incrementQuantity(itemId)); // Incrementar la cantidad
+    const handleIncrementar = (itemId) => {
+        dispatch(incrementarCantidad(itemId)); // Incrementar la cantidad
     };
 
-    const handleDecrement = (itemId) => {
-        dispatch(decrementQuantity(itemId)); // Disminuir la cantidad
+    const handleDecrementar = (itemId) => {
+        dispatch(decrementarCantidad(itemId)); // Disminuir la cantidad
     };
 
     const handleRealizarPago = async () => {
@@ -89,10 +89,10 @@ const CartView = () => {
         dispatch(clearCart());
     };
 
-    const handleApplyDiscount = () => {
+    const handleAplicarDescuento = () => {
         // Verificar si el código es correcto
-        if (discountCode.toLowerCase() === 'descuento') {
-            setDiscountApplied(true); // Aplicar el descuento
+        if (codigoDescuento.toLowerCase() === 'descuento') {
+            setDescuentoAplicado(true); // Aplicar el descuento
         } else {
             alert('Código de descuento inválido'); // Aviso si el código es incorrecto
         }
@@ -108,25 +108,25 @@ const CartView = () => {
                     {cart.map((item) => (
                         <li key={item.id}> {/* Clave por ID */}
                             {item.nombre} - ${item.precio.toLocaleString()}
-                            <button className = 'cantidadCarrito' onClick={() => handleDecrement(item.id)}>-</button>
+                            <button className = 'cantidadCarrito' onClick={() => handleDecrementar(item.id)}>-</button>
                             {item.cantidad}
-                            <button className = 'cantidadCarrito' onClick={() => handleIncrement(item.id)}>+</button>
-                            <button className='eliminarButton' onClick={() => handleRemoveFromCart(item)}>Eliminar</button>
+                            <button className = 'cantidadCarrito' onClick={() => handleIncrementar(item.id)}>+</button>
+                            <button className='eliminarButton' onClick={() => handleRemoverDelCart(item)}>Eliminar</button>
                         </li>
                     ))}
                 </ul>
             )}
             <p>Total: ${totalPrice.toLocaleString()}</p>
-            {discountApplied && (
-                <p>Total con descuento: ${discountedPrice.toLocaleString()}</p>
+            {descuentoAplicado && (
+                <p>Total con descuento: ${precioDescuento.toLocaleString()}</p>
             )}
             <input
                 type="text"
                 placeholder="Código de descuento"
-                value={discountCode}
-                onChange={(e) => setDiscountCode(e.target.value)} // Actualizar el estado del código
+                value={codigoDescuento}
+                onChange={(e) => setCodigoDescuento(e.target.value)} // Actualizar el estado del código
             />
-            <button className = 'botonDescuento' onClick={handleApplyDiscount}>Aplicar Descuento</button> {/* Botón para aplicar el descuento */}
+            <button className = 'botonDescuento' onClick={handleAplicarDescuento}>Aplicar Descuento</button> {/* Botón para aplicar el descuento */}
             <div>
                 <button className='vaciarButton' onClick={handleClearCart}>Vaciar Carrito</button>
                 <button className='comprarButton' onClick={handleRealizarPago} disabled={cart.length === 0}>Realizar compra</button>

@@ -9,7 +9,7 @@ import monitor from '../../assets/monitorgamer.jpg';
 import teclado from '../../assets/teclado.jpg';
 import auriculares from '../../assets/auriculares.jpg';
 import mouse from '../../assets/mouse.jpg';
-import { addToCart } from '../Redux/cartSlice';
+import { añadirAlCart } from '../Redux/cartSlice';
 import Swal from 'sweetalert2'; // Importar SweetAlert2
 
 const Toast = Swal.mixin({
@@ -29,10 +29,10 @@ const ProductsList = () => {
     const dispatch = useDispatch();
 
     const handleAddProduct = (producto) => {
-        dispatch(addToCart(producto)); // Agregar el producto al carrito
-        Toast.fire({ // Mostrar el toast
+        dispatch(añadirAlCart(producto)); // Agregar el producto al carrito
+        Toast.fire({  // Alerta
             icon: "success",
-            title: "Producto agregado al carrito", // Mensaje de éxito
+            title: "Producto agregado al carrito", 
         });
     };
 
