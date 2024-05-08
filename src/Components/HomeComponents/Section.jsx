@@ -25,7 +25,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Placa de video</h5>
                                 <p className="card-text">Placa de video</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -34,7 +34,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">PC Alta Gama</h5>
                                 <p className="card-text">PC armadas</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -43,7 +43,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Memoria</h5>
                                 <p className="card-text">Memoria</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -52,7 +52,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Procesador</h5>
                                 <p className="card-text">Procesador</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -61,7 +61,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Monitor</h5>
                                 <p className="card-text">Periferico</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Motherboard</h5>
                                 <p className="card-text">Motherboard</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -88,7 +88,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Procesador</h5>
                                 <p className="card-text">Procesador</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -97,7 +97,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Teclado</h5>
                                 <p className="card-text">Periferico</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -106,7 +106,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Placa de video</h5>
                                 <p className="card-text">Placa de video</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -115,7 +115,7 @@ const Section = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Memoria</h5>
                                 <p className="card-text">Memoria</p>
-                                <Link to='/products' className="btn btn-primary">Ver categoria</Link>
+                                <Link to='/products' className="btn btn-primary">Ver catalogo</Link>
                             </div>
                         </div>
                     </div>
