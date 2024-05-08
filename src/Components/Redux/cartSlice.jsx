@@ -10,10 +10,10 @@ const cartSlice = createSlice({
     reducers: {
         añadirAlCart: (state, action) => {
             const item = action.payload;
-            const existingItem = state.items.find((i) => i.id === item.id); // Comparar por ID
+            const existeItem = state.items.find((i) => i.id === item.id); // Comparar por ID
 
-            if (existingItem) {
-                existingItem.cantidad += 1; // Incrementar la cantidad del producto existente
+            if (existeItem) {
+                existeItem.cantidad += 1; // Incrementar la cantidad del producto existente
             } else {
                 state.items.push({ ...item, cantidad: 1 }); // Agregar nuevo producto al carrito
             }

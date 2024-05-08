@@ -26,7 +26,7 @@ const CartView = () => {
 
     const precioDescuento = descuentoAplicado
         ? totalPrice * 0.7 // Aplicar el descuento del 30%
-        : totalPrice; // Si no hay descuento, mantener el total original
+        : totalPrice; 
 
     const handleRemoverDelCart = (producto) => {
         dispatch(removerDelCart(producto.id)); // Eliminar por ID
@@ -106,7 +106,7 @@ const CartView = () => {
             ) : (
                 <ul>
                     {cart.map((item) => (
-                        <li key={item.id}> {/* Clave por ID */}
+                        <li key={item.id}>
                             {item.nombre} - ${item.precio.toLocaleString()}
                             <button className = 'cantidadCarrito' onClick={() => handleDecrementar(item.id)}>-</button>
                             {item.cantidad}
