@@ -1,7 +1,7 @@
 import './Filter.css'
 
 import { useDispatch } from 'react-redux';
-import { setFilter } from '../Redux/filterSlice';
+import { clearFilter, setFilter } from '../Redux/filterSlice';
 
 const FilterProducts = () => {
 
@@ -13,7 +13,7 @@ const FilterProducts = () => {
 
         // Establecer el filtro basado en lo que seleccione el usuario
         if (selectedText === 'Ver todos los productos') {
-            filter = null; // Al poner esa opcion se esta quitando el filtro por lo que muestra todos los productos
+            dispatch(clearFilter()); // Al poner esa opcion se esta quitando el filtro por lo que muestra todos los productos
         } else {
             filter = { name: selectedText }; // Filtra por el nombre del producto
         }
